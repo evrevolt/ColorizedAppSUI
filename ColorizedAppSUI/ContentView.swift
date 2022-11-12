@@ -24,7 +24,6 @@ struct ContentView: View {
             )
                 .ignoresSafeArea()
             
-            
             VStack {
                 Color(red: redColor/255,
                       green: greenColor/255,
@@ -36,11 +35,22 @@ struct ContentView: View {
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(lineWidth: 4)
                         .foregroundColor(.white))
+                .transition(.scale)
+                .animation(.default, value: redColor)
                 
                 SliderView(sliderValue: $redColor, color: .red)
                 SliderView(sliderValue: $greenColor, color: .green)
                 SliderView(sliderValue: $blueColor, color: .blue)
                 Spacer()
+                Button(action: {
+                    
+                    redColor = Double.random(in: 0...255)
+                    greenColor = Double.random(in: 0...255)
+                    blueColor = Double.random(in: 0...255)
+                    
+                }) {
+                    Text("Get Random Color")
+                }.buttonStyle(CustomButtonStyle())
             }
             .padding()
         }

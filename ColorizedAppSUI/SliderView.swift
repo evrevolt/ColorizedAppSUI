@@ -20,6 +20,7 @@ struct SliderView: View {
                 value: $sliderValue,
                 in: 0...255
             )
+            .animation(.default, value: sliderValue)
             .colorMultiply(color)
             
             TextFieldView(sliderValue: $sliderValue)
