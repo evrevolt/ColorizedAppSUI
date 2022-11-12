@@ -25,18 +25,10 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Color(red: redColor/255,
-                      green: greenColor/255,
-                      blue: blueColor/255
+                ColorView(redColor: redColor,
+                          greenColor: greenColor,
+                          blueColor: blueColor
                 )
-                .cornerRadius(30)
-                .frame(height: 200)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke(lineWidth: 4)
-                        .foregroundColor(.white))
-                .transition(.scale)
-                .animation(.default, value: redColor)
                 
                 SliderView(sliderValue: $redColor, color: .red)
                 SliderView(sliderValue: $greenColor, color: .green)

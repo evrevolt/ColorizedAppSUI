@@ -14,6 +14,7 @@
 		540EBAC7291FD31500AAA471 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540EBAC6291FD31500AAA471 /* SliderView.swift */; };
 		540EBAC9291FF56400AAA471 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540EBAC8291FF56400AAA471 /* TextFieldView.swift */; };
 		540EBACB2920048100AAA471 /* RandomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540EBACA2920048100AAA471 /* RandomButtonView.swift */; };
+		540EBACD29200BAD00AAA471 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540EBACC29200BAD00AAA471 /* ColorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		540EBAC6291FD31500AAA471 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		540EBAC8291FF56400AAA471 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		540EBACA2920048100AAA471 /* RandomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomButtonView.swift; sourceTree = "<group>"; };
+		540EBACC29200BAD00AAA471 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				540EBAB8291FD2D700AAA471 /* ColorizedAppSUIApp.swift */,
 				540EBABA291FD2D700AAA471 /* ContentView.swift */,
+				540EBACC29200BAD00AAA471 /* ColorView.swift */,
 				540EBACA2920048100AAA471 /* RandomButtonView.swift */,
 				540EBAC6291FD31500AAA471 /* SliderView.swift */,
 				540EBAC8291FF56400AAA471 /* TextFieldView.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540EBACD29200BAD00AAA471 /* ColorView.swift in Sources */,
 				540EBACB2920048100AAA471 /* RandomButtonView.swift in Sources */,
 				540EBAC7291FD31500AAA471 /* SliderView.swift in Sources */,
 				540EBABB291FD2D700AAA471 /* ContentView.swift in Sources */,
