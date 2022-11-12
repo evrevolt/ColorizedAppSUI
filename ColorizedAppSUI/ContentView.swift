@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var redColor = Double.random(in: 0...255)
-    @State private var greenColor = Double.random(in: 0...255)
-    @State private var blueColor = Double.random(in: 0...255)
+    @State private var redColor = getRangeDouble()
+    @State private var greenColor = getRangeDouble()
+    @State private var blueColor = getRangeDouble()
     
     var body: some View {
         ZStack {
@@ -44,9 +44,9 @@ struct ContentView: View {
                 Spacer()
                 Button(action: {
                     
-                    redColor = Double.random(in: 0...255)
-                    greenColor = Double.random(in: 0...255)
-                    blueColor = Double.random(in: 0...255)
+                    redColor = getRangeDouble()
+                    greenColor = getRangeDouble()
+                    blueColor = getRangeDouble()
                     
                 }) {
                     Text("Get Random Color")
@@ -55,6 +55,10 @@ struct ContentView: View {
             .padding()
         }
     }
+}
+
+private func getRangeDouble () -> Double {
+    Double.random(in: 0...255)
 }
 
 struct ContentView_Previews: PreviewProvider {
