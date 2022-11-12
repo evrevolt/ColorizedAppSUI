@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SliderView: View {
+    
     @Binding var sliderValue: Double
     let color: Color
-    
     
     var body: some View {
         HStack {
@@ -21,10 +21,9 @@ struct SliderView: View {
                 in: 0...255
             )
             .colorMultiply(color)
-            TextField("Slider Value", value: $sliderValue, formatter: NumberFormatter())
-                .frame(width: 50)
-                .background(Color(.white))
-                .multilineTextAlignment(.trailing)
+            
+            TextFieldView(sliderValue: $sliderValue)
+            
         }
     }
 }
@@ -38,3 +37,4 @@ struct SliderView_Previews: PreviewProvider {
         }
     }
 }
+
