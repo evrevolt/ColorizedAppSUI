@@ -14,18 +14,28 @@ struct ContentView: View {
     @State private var blueColor = Double.random(in: 0...255)
     
     var body: some View {
-        VStack {
-            Rectangle()
+        ZStack {
+            Color.mint
+                .ignoresSafeArea()
+            VStack {
+                Color(red: redColor/255,
+                      green: greenColor/255,
+                      blue: blueColor/255
+                )
+                .cornerRadius(30)
                 .frame(height: 200)
-                .overlay(Rectangle().stroke(lineWidth: 4))
-                .cornerRadius(40)
-                .foregroundColor(Color(red: redColor/255, green: greenColor/255, blue: blueColor/255))
-            SliderView(sliderValue: $redColor)
-            SliderView(sliderValue: $greenColor)
-            SliderView(sliderValue: $blueColor)
-            Spacer()
+                .overlay(
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(lineWidth: 4)
+                        .foregroundColor(.white))
+                
+                SliderView(sliderValue: $redColor, color: .red)
+                SliderView(sliderValue: $greenColor, color: .green)
+                SliderView(sliderValue: $blueColor, color: .blue)
+                Spacer()
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
