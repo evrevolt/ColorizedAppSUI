@@ -15,8 +15,16 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color.mint
+            
+            //Во что могу))))
+            LinearGradient(
+                stops: [SwiftUI.Gradient.Stop(color: .red, location: 0.0), SwiftUI.Gradient.Stop(color: .blue, location: 0.5), SwiftUI.Gradient.Stop(color: .green, location: 1.0)],
+                startPoint: .top,
+                endPoint: .bottom
+            )
                 .ignoresSafeArea()
+            
+            
             VStack {
                 Color(red: redColor/255,
                       green: greenColor/255,
